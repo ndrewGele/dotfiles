@@ -1,0 +1,7 @@
+# Font configuration
+font-family = Victor Mono
+font-size = 14
+
+# Enable font ligatures (Victor Mono has nice coding ligatures)
+font-feature = liga
+font-feature = calt

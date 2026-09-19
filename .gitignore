@@ -1,0 +1,13 @@
+# macOS
+.DS_Store
+
+# Dotdrop
+dotfiles/.DS_Store
+
+# Secrets (should be created manually on each machine)
+# ~/.env.local
+
+# Editor
+*.swp
+*.swo
+*~

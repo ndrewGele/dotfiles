@@ -1,0 +1,69 @@
+config:
+  backup: true
+  banner: true
+  create: true
+  dotpath: dotfiles
+  keepdot: false
+  link_dotfile_default: nolink
+  link_on_import: nolink
+  longkey: false
+dotfiles:
+  f_gitconfig:
+    src: gitconfig
+    dst: ~/.gitconfig
+  f_condarc:
+    src: condarc
+    dst: ~/.condarc
+  f_ghostty_config:
+    src: config/ghostty/config
+    dst: ~/.config/ghostty/config
+  f_system_md:
+    src: pi/agent/SYSTEM.md
+    dst: ~/.pi/agent/SYSTEM.md
+  f_subagents_json:
+    src: pi/agent/subagents.json
+    dst: ~/.pi/agent/subagents.json
+  f_settings_json:
+    src: pi/agent/settings.json
+    dst: ~/.pi/agent/settings.json
+  d_skills_plan:
+    src: pi/agent/skills/plan
+    dst: ~/.pi/agent/skills/plan
+  d_skills_execute:
+    src: pi/agent/skills/execute
+    dst: ~/.pi/agent/skills/execute
+  f_zshrc:
+    src: zshrc
+    dst: ~/.zshrc
+  f_p10k_zsh:
+    src: p10k.zsh
+    dst: ~/.p10k.zsh
+  f_zprofile:
+    src: zprofile
+    dst: ~/.zprofile
+profiles:
+  macbook:
+    dotfiles:
+    - f_gitconfig
+    - f_condarc
+    - f_ghostty_config
+    - f_system_md
+    - f_subagents_json
+    - f_settings_json
+    - d_skills_plan
+    - d_skills_execute
+    - f_zshrc
+    - f_p10k_zsh
+    - f_zprofile
+  linux:
+    dotfiles:
+    - f_gitconfig
+    - f_condarc
+    - f_ghostty_config
+    - f_system_md
+    - f_subagents_json
+    - f_settings_json
+    - d_skills_plan
+    - d_skills_execute
+    - f_zshrc
+    - f_p10k_zsh

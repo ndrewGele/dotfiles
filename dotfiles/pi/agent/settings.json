@@ -1,0 +1,94 @@
+{
+  "lastChangelogVersion": "0.85.1",
+  "defaultProvider": "xiaomi-token-plan-sgp",
+  "defaultModel": "mimo-v2.5-pro",
+  "defaultThinkingLevel": "high",
+  "packages": [
+    "npm:@tintinweb/pi-subagents",
+    "npm:pi-token-killer",
+    "npm:pi-guard",
+    "npm:pi-handoff",
+    "npm:@mtrojnar/pi-usage",
+    "npm:pi-hermes-memory"
+  ],
+  "theme": "dark",
+  "lcm": {
+    "enabled": true,
+    "leafChunkTokens": 2000,
+    "condensationThreshold": 5,
+    "maxDepth": 4,
+    "maxSummaryTokens": 5000,
+    "minMessagesForCompaction": 5,
+    "leafPassConcurrency": 2,
+    "debugMode": false
+  },
+  "guard": {
+    "enabled": true,
+    "matchers": {
+      "bash": {
+        "param": "command",
+        "type": "bash"
+      },
+      "read": {
+        "param": "path",
+        "type": "glob"
+      },
+      "write": {
+        "param": "path",
+        "type": "glob"
+      },
+      "edit": {
+        "param": "path",
+        "type": "glob"
+      },
+      "grep": {
+        "param": "path",
+        "type": "glob"
+      },
+      "find": {
+        "param": "path",
+        "type": "glob"
+      },
+      "ls": {
+        "param": "path",
+        "type": "glob"
+      }
+    },
+    "rules": {
+      "edit": {
+        "*": "ask",
+        "**/.rpiv/**": "allow"
+      },
+      "write": {
+        "*": "ask",
+        "**/.rpiv/**": "allow"
+      },
+      "read": {
+        "*": "allow",
+        "**/*.env*": "allow",
+        "**/.env": "deny",
+        "**/*.pem": "deny"
+      },
+      "ask_user_question": "allow",
+      "todo": "allow",
+      "web_search": "allow",
+      "lcm_grep": "allow",
+      "lcm_describe": "allow",
+      "lcm_expand": "allow",
+      "get_subagent_result": "allow",
+      "steer_subagent": "allow",
+      "bash": {
+        "*": "ask",
+        "kubectl get secrets": "deny",
+        "kubectl exec": "deny",
+        "sops decrypt": "deny",
+        "sops -d": "deny",
+        "sops --decrypt": "deny",
+        "sops exec-env": "deny",
+        "sops exec-file": "deny",
+        "sops edit": "deny",
+        "git rev-parse": "allow"
+      }
+    }
+  }
+}
