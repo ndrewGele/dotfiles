@@ -58,12 +58,9 @@ profiles:
   linux:
     dotfiles:
     - f_gitconfig
-    - f_condarc
     - f_ghostty_config
     - f_system_md
     - f_subagents_json
     - f_settings_json
     - d_skills_plan
     - d_skills_execute
-    - f_zshrc
-    - f_p10k_zsh
