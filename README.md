@@ -16,10 +16,11 @@ brew install dotdrop
 dotdrop install -p macbook   # or -p linux
 ```
 
-Then create `~/.env.local` with secrets:
+Then edit `dotfiles/env.local` with secrets:
 ```bash
 export BRAVE_API_KEY="your-key-here"
 ```
+This file is sourced directly from the repo (no copy to `~`).
 
 ## Common commands
 
@@ -54,4 +55,4 @@ Then add it to the other profile in `config.yaml` if it should be shared.
 
 ## Secrets
 
-Secrets live in `~/.env.local` (not tracked). The templated `.zshrc` sources it automatically.
+Secrets live in `dotfiles/env.local` (not tracked in git). Shell configs source it directly from the repo.

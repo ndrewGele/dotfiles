@@ -41,6 +41,9 @@ dotfiles:
   f_zprofile:
     src: zprofile
     dst: ~/.zprofile
+  f_fish_config:
+    src: config/fish/config.fish
+    dst: ~/.config/fish/config.fish
 profiles:
   macbook:
     dotfiles:
@@ -64,3 +67,4 @@ profiles:
     - f_settings_json
     - d_skills_plan
     - d_skills_execute
+    - f_fish_config

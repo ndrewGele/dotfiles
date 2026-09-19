@@ -22,7 +22,7 @@ export PIP_REQUIRE_VIRTUALENV=true
 export PATH="$HOME/.local/bin:$PATH"
 
 # Load local environment variables (secrets, etc.)
-[ -f ~/.env.local ] && source ~/.env.local
+[ -f ~/projects/misc/dotfiles/dotfiles/env.local ] && source ~/projects/misc/dotfiles/dotfiles/env.local
 
 {%@@ if profile == "macbook" @@%}
 # macOS-specific setup
