@@ -43,6 +43,8 @@ dotfiles:
     dst: ~/.config/fish/config.fish
 profiles:
   macbook:
+    variables:
+      ghostty_theme: ""
     dotfiles:
     - f_gitconfig
     - f_condarc
@@ -55,6 +57,8 @@ profiles:
     - f_p10k_zsh
     - f_zprofile
   linux:
+    variables:
+      ghostty_theme: "noctalia"
     dotfiles:
     - f_gitconfig
     - f_ghostty_config

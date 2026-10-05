@@ -1,5 +1,7 @@
 # Theme
-theme = noctalia
+{%@@ if ghostty_theme @@%}
+theme = {{@@ ghostty_theme @@}}
+{%@@ endif @@%}
 
 # Font configuration
 font-family = "Victor Mono"
