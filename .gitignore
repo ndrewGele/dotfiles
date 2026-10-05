@@ -4,8 +4,12 @@
 # Dotdrop
 dotfiles/.DS_Store
 
-# Secrets (should be created manually on each machine)
-# ~/.env.local
+# Secrets — must never land in the dotpath or the repo root.
+# See README "Adding a new file": never `dotdrop import ~/.env.local`.
+dotfiles/env.local
+dotfiles/.env.local
+/.env.local
+/env.local
 
 # Editor
 *.swp

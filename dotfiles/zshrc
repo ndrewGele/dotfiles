@@ -21,8 +21,15 @@ source $ZSH/oh-my-zsh.sh
 export PIP_REQUIRE_VIRTUALENV=true
 export PATH="$HOME/.local/bin:$PATH"
 
+# Set to 1 to silence the missing-env-file warning below
+: ${DOTFILES_QUIET:=0}
+
 # Load local environment variables (secrets, etc.)
-[ -f ~/projects/misc/dotfiles/dotfiles/env.local ] && source ~/projects/misc/dotfiles/dotfiles/env.local
+if [[ -f ~/.env.local ]]; then
+  source ~/.env.local
+elif [[ $DOTFILES_QUIET != 1 ]]; then
+  echo "dotfiles: ~/.env.local missing - cp env.local.example ~/.env.local" >&2
+fi
 
 {%@@ if profile == "macbook" @@%}
 # macOS-specific setup

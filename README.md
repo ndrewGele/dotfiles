@@ -16,11 +16,13 @@ brew install dotdrop
 dotdrop install -p macbook   # or -p linux
 ```
 
-Then edit `dotfiles/env.local` with secrets:
+Then create your secrets file — it lives in `$HOME`, outside the repo, so git can never see it:
 ```bash
-export BRAVE_API_KEY="your-key-here"
+cp env.local.example ~/.env.local
+$EDITOR ~/.env.local    # replace the placeholder values
+chmod 600 ~/.env.local
 ```
-This file is sourced directly from the repo (no copy to `~`).
+The templated `.zshrc` sources it on every shell startup, and prints a hint if the file is missing.
 
 ## Common commands
 
@@ -46,6 +48,10 @@ dotdrop import --dkey f_newfile -p macbook ~/.newfile
 
 Then add it to the other profile in `config.yaml` if it should be shared.
 
+> **Never `dotdrop import` `~/.env.local`.** `dotpath` is `dotfiles/`, so the import would
+> store it as `dotfiles/env.local` and commit your secrets. Keep it out of the dotpath —
+> `.gitignore` blocks that path as a backstop.
+
 ## Profiles
 
 | Profile | Notes |
@@ -55,4 +61,8 @@ Then add it to the other profile in `config.yaml` if it should be shared.
 
 ## Secrets
 
-Secrets live in `dotfiles/env.local` (not tracked in git). Shell configs source it directly from the repo.
+Secrets live in `~/.env.local` — outside the `dotpath`, so they are never tracked.
+`env.local.example` at the repo root is the tracked template; copy it and fill in real values.
+
+`$DOTFILES_QUIET=1` silences the missing-file warning (set it in `~/.zprofile` or your
+terminal's environment — not in `~/.env.local`, since that file is what triggers the warning).
