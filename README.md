@@ -54,10 +54,16 @@ Then add it to the other profile in `config.yaml` if it should be shared.
 
 ## Profiles
 
-| Profile | Notes |
-|---------|-------|
-| macbook | All files including zprofile |
-| linux | Everything except zprofile |
+| Profile | Shell | Exclusive files | Dotfiles |
+|---------|-------|-----------------|----------|
+| macbook | zsh | `zshrc`, `p10k.zsh`, `zprofile`, `condarc` | 11 |
+| linux | fish | `config/fish/config.fish` | 8 |
+
+Seven dotfiles are shared by both profiles: `gitconfig`, `config/ghostty/config`,
+and the five `pi/agent/*` entries.
+
+`config.yaml` is the source of truth — run `dotdrop files -p <profile>` if this table
+looks out of date.
 
 ## Secrets
 
