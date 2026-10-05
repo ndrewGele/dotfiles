@@ -8,7 +8,8 @@
     "npm:pi-guard",
     "npm:pi-handoff",
     "npm:@mtrojnar/pi-usage",
-    "npm:pi-hermes-memory"
+    "npm:pi-hermes-memory",
+    "npm:pi-web-access"
   ],
   "theme": "dark",
   "lcm": {
