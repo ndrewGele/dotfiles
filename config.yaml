@@ -20,9 +20,6 @@ dotfiles:
   f_system_md:
     src: pi/agent/SYSTEM.md
     dst: ~/.pi/agent/SYSTEM.md
-  f_subagents_json:
-    src: pi/agent/subagents.json
-    dst: ~/.pi/agent/subagents.json
   f_settings_json:
     src: pi/agent/settings.json
     dst: ~/.pi/agent/settings.json
@@ -51,7 +48,6 @@ profiles:
     - f_condarc
     - f_ghostty_config
     - f_system_md
-    - f_subagents_json
     - f_settings_json
     - d_skills_plan
     - d_skills_execute
@@ -63,7 +59,6 @@ profiles:
     - f_gitconfig
     - f_ghostty_config
     - f_system_md
-    - f_subagents_json
     - f_settings_json
     - d_skills_plan
     - d_skills_execute

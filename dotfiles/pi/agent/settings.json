@@ -73,8 +73,6 @@
       "lcm_grep": "allow",
       "lcm_describe": "allow",
       "lcm_expand": "allow",
-      "get_subagent_result": "allow",
-      "steer_subagent": "allow",
       "bash": {
         "*": "ask",
         "kubectl get secrets": "deny",
