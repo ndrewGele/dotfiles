@@ -1,8 +1,13 @@
 source /usr/share/cachyos-fish-config/cachyos-config.fish
 
+# Set to 1 to silence the missing-env-file warning below
+set -q DOTFILES_QUIET; or set -g DOTFILES_QUIET 0
+
 # Load local environment variables (secrets, etc.)
-if test -f ~/projects/misc/dotfiles/dotfiles/env.local
-    source ~/projects/misc/dotfiles/dotfiles/env.local
+if test -f ~/.env.local
+    source ~/.env.local
+else if test "$DOTFILES_QUIET" != 1
+    echo "dotfiles: ~/.env.local missing - cp env.local.example ~/.env.local" >&2
 end
 
 # overwrite greeting
