@@ -62,7 +62,7 @@ Only `install` writes backups — `update` and `import` replace the repo copy in
 dotdrop picks a profile in this order:
 
 1. `-p <profile>` — always wins
-2. `$DOTDROP_PROFILE` — set in `~/.zshrc` (macbook only)
+2. `$DOTDROP_PROFILE` — set in your shell rc (`~/.zshrc` on macbook, `~/.config/fish/config.fish` on linux)
 3. hostname — **the fallback**
 
 Step 3 is why every example here passes `-p`. On a fresh machine the hostname
@@ -75,7 +75,7 @@ Step 3 is why every example here passes `-p`. On a fresh machine the hostname
 A missing profile also gets *created*: `dotdrop import ~/.foo` with no `-p` adds a
 junk profile named after your hostname to `config.yaml`.
 
-Because step 2 lives in `.zshrc`, it only applies to interactive shells — scripts
+Because step 2 lives in your shell rc, it only applies to interactive shells — scripts
 and `ssh host dotdrop ...` should pass `-p` explicitly.
 
 ## Adding a new file
