@@ -21,6 +21,8 @@ source $ZSH/oh-my-zsh.sh
 export PIP_REQUIRE_VIRTUALENV=true
 export PATH="$HOME/.local/bin:$PATH"
 
+export DOTDROP_PROFILE="{{@@ profile @@}}"
+
 # Set to 1 to silence the missing-env-file warning below
 : ${DOTFILES_QUIET:=0}
 
