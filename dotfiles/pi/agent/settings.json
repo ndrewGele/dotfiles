@@ -1,15 +1,14 @@
 {
   "lastChangelogVersion": "1.0.2",
   "defaultProvider": "xiaomi-token-plan-sgp",
-  "defaultModel": "mimo-v2.5-pro",
+  "defaultModel": "mimo-v2.6-flash",
   "defaultThinkingLevel": "high",
   "packages": [
     "npm:pi-token-killer",
     "npm:pi-guard",
     "npm:pi-handoff",
     "npm:@mtrojnar/pi-usage",
-    "npm:pi-hermes-memory",
-    "npm:pi-web-access"
+    "npm:pi-hermes-memory"
   ],
   "theme": "dark",
   "lcm": {
@@ -73,6 +72,8 @@
       "lcm_grep": "allow",
       "lcm_describe": "allow",
       "lcm_expand": "allow",
+      "get_subagent_result": "allow",
+      "steer_subagent": "allow",
       "bash": {
         "*": "ask",
         "kubectl get secrets": "deny",
