@@ -1,5 +1,7 @@
 source /usr/share/cachyos-fish-config/cachyos-config.fish
 
+set -gx DOTDROP_PROFILE "{{@@ profile @@}}"
+
 # Set to 1 to silence the missing-env-file warning below
 set -q DOTFILES_QUIET; or set -g DOTFILES_QUIET 0
 
