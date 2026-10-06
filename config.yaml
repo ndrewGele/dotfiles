@@ -44,7 +44,7 @@ dotfiles:
 profiles:
   macbook:
     variables:
-      ghostty_theme: ""
+      ghostty_theme: ''
     dotfiles:
     - f_gitconfig
     - f_condarc
@@ -58,7 +58,7 @@ profiles:
     - f_zprofile
   linux:
     variables:
-      ghostty_theme: "noctalia"
+      ghostty_theme: noctalia
     dotfiles:
     - f_gitconfig
     - f_ghostty_config
