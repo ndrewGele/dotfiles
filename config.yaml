@@ -41,6 +41,9 @@ dotfiles:
   f_fish_config:
     src: config/fish/config.fish
     dst: ~/.config/fish/config.fish
+  f_web_search_json:
+    src: pi/agent/web-search.json
+    dst: ~/.pi/agent/web-search.json
 profiles:
   macbook:
     variables:
@@ -56,6 +59,7 @@ profiles:
     - f_zshrc
     - f_p10k_zsh
     - f_zprofile
+    - f_web_search_json
   linux:
     variables:
       ghostty_theme: noctalia
@@ -67,3 +71,4 @@ profiles:
     - d_skills_plan
     - d_skills_execute
     - f_fish_config
+    - f_web_search_json
