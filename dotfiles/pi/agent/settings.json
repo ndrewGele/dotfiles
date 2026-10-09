@@ -1,14 +1,13 @@
 {
-  "lastChangelogVersion": "1.0.2",
+  "lastChangelogVersion": "1.1.0",
   "defaultProvider": "xiaomi-token-plan-sgp",
   "defaultModel": "mimo-v2.6-flash",
   "defaultThinkingLevel": "high",
   "packages": [
-    "npm:pi-token-killer",
     "npm:pi-guard",
-    "npm:pi-handoff",
     "npm:@mtrojnar/pi-usage",
-    "npm:pi-hermes-memory"
+    "npm:pi-hermes-memory",
+    "npm:pi-web-access"
   ],
   "theme": "dark",
   "lcm": {
@@ -87,5 +86,6 @@
         "git rev-parse": "allow"
       }
     }
-  }
+  },
+  "hideThinkingBlock": false
 }
