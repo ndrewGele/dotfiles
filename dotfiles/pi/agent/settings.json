@@ -5,7 +5,6 @@
   "defaultThinkingLevel": "medium",
   "packages": [
     "npm:pi-guard",
-    "npm:@mtrojnar/pi-usage",
     "npm:pi-hermes-memory",
     "npm:pi-web-access"
   ],
