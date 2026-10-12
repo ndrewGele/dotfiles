@@ -6,7 +6,9 @@
   "packages": [
     "npm:pi-guard",
     "npm:pi-hermes-memory",
-    "npm:pi-web-access"
+    "npm:pi-web-access",
+    "npm:pi-intercom",
+    "npm:pi-subagents"
   ],
   "theme": "dark",
   "lcm": {
