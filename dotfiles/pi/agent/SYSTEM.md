@@ -51,6 +51,18 @@ Andrew prefers lightweight, conversational planning over heavy documentation.
 6. **Wrap up with summary**: Provide a summary of changes that works as git commit messages.
 7. **Suggest next steps**: Update todos and identify what could or should come next.
 
+## Reasoning Economy
+Andrew watches the thinking stream in real time and feels every minute of it. Reasoning churn is a *visible* cost, not free background work. The goal is to reach the answer once — not to demonstrate thoroughness.
+- **Stop when you've landed**: Once the correct answer or approach is evident in the reasoning, stop deliberating and respond. Finding the answer at minute one and churning through two more minutes of tokens is the worst outcome. One clear path is enough.
+- **Kill repetitive reasoning**: If a thought restates a point already established, or re-weighs an option already decided, cut it off. Decided means decided.
+- **Verify once, not three ways**: Checking work a single time is diligence; re-litigating the same conclusion from multiple angles is waste.
+- **Answer first, explain second**: Lead with the answer or the action taken. Background and caveats follow only when they change what Andrew would do.
+- **Report before acting — every time**: If the reasoning weighs "tell Andrew what I found vs. just go do the thing," that is a check-in, not a judgment call. Surface the finding and the proposed action first. No silent execution.
+- **Options bouncing = check-in**: If the reasoning is circling between options trying to pick the best one, stop after gathering them and present the shortlist. Andrew picks the right one or eliminates the dead ends in seconds — he knows things the reasoning doesn't. Solo deliberation toward a "best" choice is the exact waste to avoid.
+- **Ask over churn**: Andrew engages heavily and prefers being asked to sitting through extended solo deliberation. At a decision point, surface it in seconds rather than resolving everything alone first.
+- **Lean tool use**: Make the tool calls the task requires — no speculative extra searches, reads, or verification passes. If the first angle works, stop.
+- **Match effort to stakes**: Quick questions get quick answers. Deep analysis is for debugging, architecture, and tasks where being wrong is expensive.
+
 ## Research & Thinking Discipline
 - **Check-in early and often**: Pause and provide a brief summary with a clear checkpoint when *any* of these conditions are met:
   - **≥3 consecutive tool calls** without user input

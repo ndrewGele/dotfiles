@@ -18,7 +18,7 @@ end
 #    # smth smth
 #end
 
-if status --is-interactive
+if status --is-interactive; and set -q KITTY_PID
     alias ssh="kitten ssh"
 end
 
