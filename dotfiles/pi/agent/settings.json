@@ -1,7 +1,5 @@
 {
   "lastChangelogVersion": "1.4.0",
-  "defaultProvider": "xiaomi-token-plan-sgp",
-  "defaultModel": "mimo-v2.6-flash",
   "defaultThinkingLevel": "medium",
   "packages": [
     "npm:pi-guard",
