@@ -97,29 +97,56 @@ change still has to be installed on each one:
 
 ```bash
 # Mac: you edited the live file
-dotdrop update  -p macbook ~/.pi/agent/settings.json   # live → repo
-git commit -am "settings: bump default model"
+dotdrop update  -p macbook ~/.pi/agent/web-search.json  # live → repo
+git commit -am "web-search: bump provider"
 
 # Linux box: pick up the same change
 git pull
-dotdrop install -p linux ~/.pi/agent/settings.json     # repo → live
+dotdrop install -p linux ~/.pi/agent/web-search.json    # repo → live
 ```
 
 Shared files can still render per machine — `{{@@ ghostty_theme @@}}` resolves from
 that profile's `variables:` block in `config.yaml`.
 
+`pi/agent/settings.json` is a template, so `dotdrop update` will not touch it.
+Edit the tracked copy under `dotfiles/pi/agent/` and install instead:
+
+```bash
+$EDITOR dotfiles/pi/agent/settings.json
+dotdrop install -p linux ~/.pi/agent/settings.json
+```
+
 ## Profiles
 
 | Profile | Shell | Exclusive files | Dotfiles |
 |---------|-------|-----------------|----------|
-| macbook | zsh | `zshrc`, `p10k.zsh`, `zprofile`, `condarc` | 10 |
-| linux | fish | `config/fish/config.fish` | 7 |
+| macbook | zsh | `zshrc`, `p10k.zsh`, `zprofile`, `condarc` | 11 |
+| linux | fish | `config/fish/config.fish` | 8 |
 
-Six dotfiles are shared by both profiles: `gitconfig`, `config/ghostty/config`,
-and the four `pi/agent/*` entries.
+Seven dotfiles are shared by both profiles: `gitconfig`, `config/ghostty/config`,
+and the five `pi/agent/*` entries.
 
 `config.yaml` is the source of truth — run `dotdrop files -p <profile>` if this table
 looks out of date.
+
+## Templated files
+
+`pi/agent/settings.json` is a template, so the same tracked file renders differently
+per machine:
+
+| Variable | macbook | linux |
+|----------|---------|-------|
+| `ghostty_theme` | `''` (line omitted) | `noctalia` |
+| `pi_theme` | `dark` | `noctalia` |
+
+`pi_theme` sets pi's `"theme"` in `settings.json`. `dark` is built into pi; `noctalia`
+is a custom theme written by the running noctalia process, so its JSON is **not**
+tracked here — the linux box generates it. Never commit `~/.pi/agent/themes/noctalia.json`;
+it changes with the wallpaper and would churn the repo.
+
+Because `settings.json` is a template, `dotdrop update` refuses to touch it
+("uses template, update manually"). Edit the tracked copy in the repo instead, then
+`dotdrop install -p <profile> ~/.pi/agent/settings.json`.
 
 ## Backups
 

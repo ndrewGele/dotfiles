@@ -44,10 +44,14 @@ dotfiles:
   f_web_search_json:
     src: pi/agent/web-search.json
     dst: ~/.pi/agent/web-search.json
+  f_subscription_usage_json:
+    src: pi/agent/subscription-usage.json
+    dst: ~/.pi/agent/subscription-usage.json
 profiles:
   macbook:
     variables:
       ghostty_theme: ''
+      pi_theme: dark
     dotfiles:
     - f_gitconfig
     - f_condarc
@@ -60,9 +64,11 @@ profiles:
     - f_p10k_zsh
     - f_zprofile
     - f_web_search_json
+    - f_subscription_usage_json
   linux:
     variables:
       ghostty_theme: noctalia
+      pi_theme: noctalia
     dotfiles:
     - f_gitconfig
     - f_ghostty_config
@@ -72,3 +78,4 @@ profiles:
     - d_skills_execute
     - f_fish_config
     - f_web_search_json
+    - f_subscription_usage_json

@@ -6,9 +6,10 @@
     "npm:pi-hermes-memory",
     "npm:pi-web-access",
     "npm:pi-intercom",
-    "npm:pi-subagents"
+    "npm:pi-subagents",
+    "npm:@specode/pi-subscription-usage"
   ],
-  "theme": "dark",
+  "theme": "{{@@ pi_theme @@}}",
   "lcm": {
     "enabled": true,
     "leafChunkTokens": 2000,
