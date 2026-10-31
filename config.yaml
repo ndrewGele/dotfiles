@@ -32,6 +32,9 @@ dotfiles:
   f_settings_json:
     src: pi/agent/settings.json
     dst: ~/.pi/agent/settings.json
+  f_pi_status_footer:
+    src: pi/agent/extensions/status-footer.ts
+    dst: ~/.pi/agent/extensions/status-footer.ts
   d_skills_plan:
     src: pi/agent/skills/plan
     dst: ~/.pi/agent/skills/plan
@@ -70,6 +73,7 @@ profiles:
     - f_herdr_app_layout_split
     - f_system_md
     - f_settings_json
+    - f_pi_status_footer
     - d_skills_plan
     - d_skills_execute
     - f_zshrc
@@ -89,6 +93,7 @@ profiles:
     - f_herdr_app_layout_split
     - f_system_md
     - f_settings_json
+    - f_pi_status_footer
     - d_skills_plan
     - d_skills_execute
     - f_fish_config
